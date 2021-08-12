@@ -25,4 +25,13 @@ public class ClienteService {
     public List<ClienteDTO> mostrarClientes(){
         return clientes;
     }
+
+    public ClienteDTO buscarCliente (String cpf)throws Exception{
+        for (ClienteDTO cliente: clientes) {
+            if (cliente.getCpf().equals(cpf)){
+                return cliente;
+            }
+        }
+        throw new Exception("Cliente já cadastrado!");
+    }
 }
