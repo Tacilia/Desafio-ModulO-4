@@ -15,4 +15,14 @@ public class ClienteService {
         clientes.add(cliente);
         return cliente;
     }
+    /*public ClienteDTO mostrarCliente(){
+        for (ClienteDTO cliente:clientes) {
+            return cliente;
+        }
+        return (ClienteDTO) clientes;
+    }*/
+
+    public List<ClienteDTO> mostrarClientes(){
+        return clientes;
+    }
 }
