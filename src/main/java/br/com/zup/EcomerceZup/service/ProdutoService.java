@@ -20,9 +20,12 @@ public class ProdutoService {
         return produtos;
     }
 
-    /*public ProdutoDTO buscarProduto (){
+    public ProdutoDTO buscarProduto (String nome)throws Exception{
         for (ProdutoDTO produto: produtos) {
-            return produto;
+            if (produto.getNome().equals(nome)){
+                return produto;
+            }
         }
-    }*/
+        throw new Exception("Produto já cadastrado!");
+    }
 }

@@ -27,4 +27,8 @@ public class ProdutoController {
         return produtoService.mostrarProduto();
     }
 
+    @GetMapping ("/nome")
+    public ProdutoDTO buscarProduto(@RequestParam String nome)throws Exception{
+        return produtoService.buscarProduto(nome);
+    }
 }
