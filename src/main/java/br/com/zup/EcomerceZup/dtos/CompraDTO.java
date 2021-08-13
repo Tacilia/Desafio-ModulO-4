@@ -1,22 +1,23 @@
-/*package br.com.zup.EcomerceZup.dtos;
+package br.com.zup.EcomerceZup.dtos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class CompraDTO {
 
-    private String nome;
-    private List<CompraDTO> compra;
+    private String nomeCliente;
+    private List<CompraDTO> compra = new ArrayList<>();
 
 
     public CompraDTO(){
     }
 
-    public String getNome() {
-        return nome;
+    public String getNomeCliente() {
+        return nomeCliente;
     }
 
-    public void setNome(String nome) {
-        this.nome = nome;
+    public void setNomeCliente(String nomeCliente) {
+        this.nomeCliente = nomeCliente;
     }
 
     public List<CompraDTO> getCompra() {
@@ -26,4 +27,4 @@ public class CompraDTO {
     public void setCompra(List<CompraDTO> compra) {
         this.compra = compra;
     }
-}*/
+}
