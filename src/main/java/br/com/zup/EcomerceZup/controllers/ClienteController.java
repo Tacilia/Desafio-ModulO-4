@@ -16,7 +16,7 @@ public class ClienteController {
     private ClienteService clienteService;
 
     @PostMapping
-    public ClienteDTO cadastrarCliente(@RequestBody ClienteDTO clienteDTO){
+    public ClienteDTO cadastrarCliente(@RequestBody ClienteDTO clienteDTO) throws Exception {
         clienteService.cadastraCliente(clienteDTO);
         return clienteDTO;
     }

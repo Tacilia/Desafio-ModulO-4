@@ -2,10 +2,12 @@ package br.com.zup.EcomerceZup.dtos;
 
 import java.util.List;
 
-public class CompraDTO {
+/*public class CompraDTO {
 
     private String nome;
-    private List<ProdutoDTO> venda;
+    private String cpf;
+    private List<CompraDTO> compra;
+    //private List<ProdutoDTO> venda;
 
     public CompraDTO(){
     }
@@ -18,11 +20,19 @@ public class CompraDTO {
         this.nome = nome;
     }
 
-    public List<ProdutoDTO> getVenda() {
-        return venda;
+    public String getCpf() {
+        return cpf;
     }
 
-    public void setVenda(List<ProdutoDTO> venda) {
-        this.venda = venda;
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
-}
+
+    public List<CompraDTO> getCompra() {
+        return compra;
+    }
+
+    public void setCompra(List<CompraDTO> compra) {
+        this.compra = compra;
+    }
+}*/

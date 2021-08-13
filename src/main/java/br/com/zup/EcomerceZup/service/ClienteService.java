@@ -11,7 +11,8 @@ import java.util.List;
 public class ClienteService {
     private List<ClienteDTO>clientes = new ArrayList<>();
 
-    public ClienteDTO cadastraCliente(ClienteDTO cliente){
+    public ClienteDTO cadastraCliente(ClienteDTO cliente) throws Exception {
+        validarCliente(cliente.getCpf(), cliente.getEmail());
         clientes.add(cliente);
         return cliente;
     }
@@ -32,6 +33,18 @@ public class ClienteService {
                 return cliente;
             }
         }
-        throw new Exception("Cliente já cadastrado!");
+        throw new Exception("Cliente não cadastrado!");
+    }
+
+    public String validarCliente (String cpf, String email)throws Exception{
+        for (ClienteDTO cliente: clientes) {
+            if (cliente.getCpf().equals(cpf)){
+                throw new Exception("CPF do cliente já cadastrado!");
+            }
+            else if (cliente.getEmail().equals(email)){
+                throw new Exception("Email do cliente já cadastrado");
+            }
+        }
+        return ("Cliente cadastrado com sucesso");
     }
 }
