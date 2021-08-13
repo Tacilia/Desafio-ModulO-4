@@ -10,11 +10,15 @@ import java.util.List;
 public class CompraService {
     private List<CompraDTO> compras = new ArrayList<>();
 
-    public void compra (String nomeCliente, CompraDTO compraDTO) {
+    public CompraDTO compra (String nomeCliente, CompraDTO compraDTO) {
         for (CompraDTO compra : compras) {
             if (compra.getNomeCliente().equals(nomeCliente)){
                 compra.getCompra().add(compraDTO);
             }
         }
+        return compraDTO;
+    }
+    public List<CompraDTO> mostrarLista(String nomeClinete, CompraDTO compraDTO){
+        return compras;
     }
 }
