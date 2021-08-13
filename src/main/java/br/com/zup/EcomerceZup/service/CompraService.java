@@ -12,13 +12,9 @@ public class CompraService {
     private List<CompraDTO> compras = new ArrayList<>();
     private ProdutoService produtoService;
 
-    public void cadastrarCompraCliente(String cpf, ProdutoDTO produtoDTO) throws Exception{
-        for (CompraDTO compra: compras) {
-            if (compra.getCliente().getCpf().equals(cpf)){
-                compra.getProduto().add(produtoDTO);
-            }
-            throw new Exception("Compra não cadastrada");
-        }
+    public List<CompraDTO> cadastrarCompraCliente(CompraDTO compraDTO) throws Exception{
+        this.compras.add(compraDTO);
+        return compras;
     }
     public List<CompraDTO> mostrarCliente(){
         return compras;

@@ -17,8 +17,9 @@ public class CompraController {
     private CompraService compraService;
 
     @PostMapping
-    public void cadastrarCompraCliente(String cpf, ProdutoDTO produtoDTO) throws Exception{
-    compraService.cadastrarCompraCliente(cpf, produtoDTO);
+    public void cadastrarCompraCliente(@RequestBody CompraDTO compraDTO) throws Exception {
+
+        compraService.cadastrarCompraCliente(compraDTO);
     }
 
     @GetMapping

@@ -1,5 +1,6 @@
 package br.com.zup.EcomerceZup.service;
 
+import br.com.zup.EcomerceZup.dtos.CompraDTO;
 import br.com.zup.EcomerceZup.dtos.ProdutoDTO;
 import org.springframework.stereotype.Service;
 
@@ -36,4 +37,7 @@ public class ProdutoService {
             }
         }
     }
+    /*public List<CompraDTO> mostrarCliente(){
+        return compras;
+    }*/
 }
