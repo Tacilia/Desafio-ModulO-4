@@ -17,7 +17,7 @@ public class ProdutoController {
     private ProdutoService produtoService;
 
     @PostMapping
-    public ProdutoDTO cadastrarProduto(@RequestBody ProdutoDTO produtoDTO){
+    public ProdutoDTO cadastrarProduto(@RequestBody ProdutoDTO produtoDTO) throws Exception {
         produtoService.cadastraProduto(produtoDTO);
         return produtoDTO;
     }

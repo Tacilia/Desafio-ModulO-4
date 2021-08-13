@@ -1,13 +1,12 @@
-package br.com.zup.EcomerceZup.dtos;
+/*package br.com.zup.EcomerceZup.dtos;
 
 import java.util.List;
 
-/*public class CompraDTO {
+public class CompraDTO {
 
     private String nome;
-    private String cpf;
     private List<CompraDTO> compra;
-    //private List<ProdutoDTO> venda;
+
 
     public CompraDTO(){
     }
@@ -18,14 +17,6 @@ import java.util.List;
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public String getCpf() {
-        return cpf;
-    }
-
-    public void setCpf(String cpf) {
-        this.cpf = cpf;
     }
 
     public List<CompraDTO> getCompra() {
