@@ -5,7 +5,7 @@ import java.util.List;
 
 public class CompraDTO {
 
-    private String nomeCliente;
+    private String cpfCliente;
     private List<CompraDTO> compra = new ArrayList<>();
 
 
@@ -13,11 +13,11 @@ public class CompraDTO {
     }
 
     public String getNomeCliente() {
-        return nomeCliente;
+        return cpfCliente;
     }
 
     public void setNomeCliente(String nomeCliente) {
-        this.nomeCliente = nomeCliente;
+        this.cpfCliente = nomeCliente;
     }
 
     public List<CompraDTO> getCompra() {

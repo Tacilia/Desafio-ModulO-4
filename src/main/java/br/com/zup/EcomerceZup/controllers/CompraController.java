@@ -6,6 +6,8 @@ import br.com.zup.EcomerceZup.service.CompraService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/compra")
 public class CompraController {
@@ -14,8 +16,12 @@ public class CompraController {
     private CompraService compraService;
 
     @PostMapping
-    public CompraDTO buscarCompra(@RequestBody String nomeClinete, CompraDTO compraDTO){
-       return compraService.compra(nomeClinete, compraDTO);
+    public CompraDTO buscarCompra(@RequestBody String cpfClinete, CompraDTO compraDTO) throws Exception {
+        return compraService.compra(cpfClinete, compraDTO);
     }
 
+    @GetMapping("/cpfCliente")
+    public void mostrarLista(String cpfClinete, CompraDTO compraDTO) {
+        List<CompraDTO> compra;
+    }
 }

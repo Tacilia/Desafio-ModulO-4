@@ -10,15 +10,15 @@ import java.util.List;
 public class CompraService {
     private List<CompraDTO> compras = new ArrayList<>();
 
-    public CompraDTO compra (String nomeCliente, CompraDTO compraDTO) {
+    public CompraDTO compra (String cpfCliente, CompraDTO compraDTO) throws Exception {
         for (CompraDTO compra : compras) {
-            if (compra.getNomeCliente().equals(nomeCliente)){
+            if (compra.getNomeCliente().equals(cpfCliente)){
                 compra.getCompra().add(compraDTO);
             }
         }
-        return compraDTO;
+        throw new Exception("Compra não encontrada!");
     }
-    public List<CompraDTO> mostrarLista(String nomeClinete, CompraDTO compraDTO){
+    public List<CompraDTO> mostrarLista(String cpfClinete, CompraDTO compraDTO){
         return compras;
     }
 }
