@@ -5,26 +5,26 @@ import java.util.List;
 
 public class CompraDTO {
 
-    private String cpfCliente;
-    private List<CompraDTO> compra = new ArrayList<>();
-
+    private ClienteDTO cliente;
+    private List<ProdutoDTO> produto = new ArrayList<>();
 
     public CompraDTO(){
+
     }
 
-    public String getNomeCliente() {
-        return cpfCliente;
+    public ClienteDTO getCliente() {
+        return cliente;
     }
 
-    public void setNomeCliente(String nomeCliente) {
-        this.cpfCliente = nomeCliente;
+    public void setCliente(ClienteDTO cliente) {
+        this.cliente = cliente;
     }
 
-    public List<CompraDTO> getCompra() {
-        return compra;
+    public List<ProdutoDTO> getProduto() {
+        return produto;
     }
 
-    public void setCompra(List<CompraDTO> compra) {
-        this.compra = compra;
+    public void setProduto(List<ProdutoDTO> produto) {
+        this.produto = produto;
     }
 }
